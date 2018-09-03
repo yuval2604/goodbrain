@@ -1,0 +1,61 @@
+<% include ../partials/header %> 
+ <div class="container">
+     <header class="jumbotron">
+         <div class="container">
+             <h1>Welcome To GoodBrain!</h1>
+             <p>View our hand-picked math problems from all over the world</p>
+             <p>
+                <a class="btn btn-primary btn-large" href="/exercises/new">Add New Exercise</a>
+             </p>
+         </div>
+     </header>
+     
+      <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% exercises.forEach(function(exercise){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                   <img class="" src="<%= exercise.image %>">
+                   <div class="caption">
+                       <h4><%= exercise.name %></h4>
+                       <p class="limit"><%=exercise.description %></p>
+                   </div>
+                   <p>
+                       <!--<a href="/exercises/<%= exercise._id %>" class="btn btn-primary">More Info</a>-->
+                       <!-- Trigger/Open The Modal -->
+							<div class="flex">
+								<a href="#0" class="bttn" id="myBtn" onclick= "document.getElementById('myModal<%= exercise._id %>').style.display = 'block'" >More info</a>
+							</div>
+							<!-- Modal content -->
+							<!-- The Modal -->
+							<div id="myModal<%= exercise._id %>" class="modal">
+							<!-- Modal content -->
+								<div class="modal-content">
+								<span class="close" onclick="document.getElementById('myModal<%= exercise._id %>').style.display = 'none' ;">&times;</span>
+									<!--<p style="display: block;  font-size: large; font-weight: bold;">-->
+									<!--	4x+3=7</br>-->
+									<!--	4x=4</br>-->
+									<!--	x=1-->
+									<!--</p>-->
+									<p><%=exercise.description %></p>
+									<button class="button button--secondary" style="">
+									  <a href="/exercises/<%= exercise._id %>"><span class="button__inner" style="color:gold;">Answer</span></a>
+									</button>
+									<!--<form id="delete-form" action="/exercise/<%= exercise._id %>?_method=DELETE" method="POST">-->
+         <!--                               <button class="btn btn-xs btn-danger">Delete</button>-->
+         <!--                           </form>-->
+									<!-- <div class="container2 up">
+									 <button class="btn2">
+									 	<span class="btn-text">Hover Me</span>
+									 </button>
+									</div> -->
+	
+								</div>
+							</div>
+                   </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %>
