@@ -15,7 +15,12 @@ var commentRoutes= require("./routes/comments"),
     exerciseRoutes= require("./routes/exercises"),
     indexRoutes = require("./routes/index");
     
-mongoose.connect("mongodb://localhost/Goodbrain");
+//mongoose.connect("mongodb://localhost/Goodbrain");
+
+mongoose.connect("mongodb://Yuval:yuval2604@ds143262.mlab.com:43262/goodbrain");
+
+ // mongodb://yuval:yuval2604@ds143262.mlab.com:43262/goodbrain
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
