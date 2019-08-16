@@ -313,4 +313,131 @@
 
 
 
+/*Login good brain headline development*/
+
+    @keyframes move1 {
+      0% {
+        transform: translate(0px);
+      }
+      25% {
+        transform: translateX(8px);
+      }
+      50% {
+        transform: translate(16px, 16px);
+      }
+      75% {
+        transform: translateY(8px);
+      }
+      100% {
+        transform: translate(0px);
+      }
+    }
+    @keyframes move2 {
+      0% {
+        transform: translate(0px);
+      }
+      25% {
+        transform: translateX(-8px);
+      }
+      50% {
+        transform: translate(-16px, -20px);
+      }
+      75% {
+        transform: translateY(-12px);
+      }
+      100% {
+        transform: translate(0px);
+      }
+    }
+    @keyframes move3 {
+      0% {
+        transform: translate(0px);
+      }
+      25% {
+        transform: translateX(-8px);
+      }
+      50% {
+        transform: translate(-16px, -20px);
+      }
+      75% {
+        transform: translateY(-12px);
+      }
+      100% {
+        transform: translate(0px);
+      }
+    }
+    @keyframes move4 {
+      0% {
+        transform: translate(0px);
+      }
+      25% {
+        transform: translateX(-8px);
+      }
+      50% {
+        transform: translate(-16px, -6px);
+      }
+      75% {
+        transform: translateY(-11px);
+      }
+      100% {
+        transform: translate(0px);
+      }
+    }
+    #shapes {
+      top: calc(40% - 250px);
+      left: calc(30% - 250px);
+      position: relative;
+      width: 400px;
+      height: 400px;
+    }
+    #shapes h1 {
+      z-index: 1;
+      position: relative;
+    }
+    
+    .circle-1, .circle-2, .circle-3, .circle-4 {
+      position: absolute;
+      border-radius: 50%;
+      margin: 0;
+    }
+    
+    .circle-1 {
+      width: 250px;
+      height: 250px;
+      border: 1px solid #0433ff;
+      top: 0px;
+      left: 0px;
+      animation: move1 4s linear infinite;
+    }
+    
+    .circle-2 {
+      width: 225px;
+      height: 225px;
+      border: 1px solid #e57373;
+      margin: 0;
+      top: 60px;
+      left: 45px;
+      animation: move2 3.5s linear infinite;
+    }
+    
+    .circle-3 {
+      width: 240px;
+      height: 240px;
+      border: 1px solid #4dd0e1;
+      margin: 0;
+      top: 35px;
+      left: 25px;
+      animation: move3 3s linear infinite;
+    }
+    
+    .circle-4 {
+      width: 260px;
+      height: 260px;
+      border: 1px solid #009688;
+      margin: 0;
+      top: 10px;
+      left: 25px;
+      animation: move4 3s linear infinite;
+    }
+
 

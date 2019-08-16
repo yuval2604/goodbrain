@@ -2,20 +2,20 @@
 
 body{
   background-image: url(https://unsplash.it/1228/880?image=302);
+ background-size: 100% auto;
 }
 
-*, *:before, *:after{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font: 300 1em/1.5 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  text-decoration: none;
-  color: #111;
-}
+/**, *:before, *:after{*/
+/*  box-sizing: border-box;*/
+/*  padding: 0;*/
+/*  margin: 0;*/
+/*  font: 300 1em/1.5 'Open Sans', 'Helvetica Neue', Arial, sans-serif;*/
+/*  text-decoration: none;*/
+/*  color: #111;*/
+/*}*/
 
 .box:after {
-  width: 100%;
-  height: 100%;
+  
   content: '';
   border-top: 70vh solid rgb(104, 076, 150);
   border-left: 100vw solid transparent;
@@ -24,7 +24,7 @@ body{
 }
 
 h1{
-  margin-top: 4%;
+    margin-top: 4%;
     text-align: center;
     font-weight: bold;
     font-size: 50px;
@@ -96,6 +96,7 @@ p{
   background-color: #fafafa;
   box-shadow: 0 0 2rem #babbbc;
   animation: show-profile 0.5s forwards ease-in-out;
+  margin-top: 3%;
 }
 @keyframes show-profile {
   0% {
