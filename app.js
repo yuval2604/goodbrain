@@ -54,7 +54,7 @@ app.use("/exercises/:id/comments", commentRoutes);
 // });
 
 console.log(process.env.PORT);
-app.listen(8000, process.env.IP, function() {
+app.listen(process.env.PORT, process.env.IP, function() {
   console.log("The GoodBrain Server Has Started!");
 });
 
