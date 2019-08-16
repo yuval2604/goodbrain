@@ -53,8 +53,7 @@ app.use("/exercises/:id/comments", commentRoutes);
 //     res.render("StepUp/index.ejs");
 // });
 
-console.log(process.env.PORT);
-app.listen(process.env.PORT, process.env.IP, function() {
+app.listen(8000, process.env.IP, function() {
   console.log("The GoodBrain Server Has Started!");
 });
 
